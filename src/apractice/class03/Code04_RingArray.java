@@ -1,7 +1,9 @@
 package apractice.class03;
 
-//空时返回什么
+//空时返回什么  直接throw
 //这里泛型使用
+//出现的数字不是在已知框架中约定俗成，就要考虑软编码 构造函数中传递
+//多加一个变量根本可以忽略，但能省很多代码
 public  class Code04_RingArray<T> {
     int size = 0;
     int inIndex =0;
