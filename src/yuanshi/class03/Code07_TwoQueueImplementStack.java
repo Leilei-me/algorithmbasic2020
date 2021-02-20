@@ -36,14 +36,21 @@ public class Code07_TwoQueueImplementStack {
 			}
 			T ans = queue.poll();
 			help.offer(ans);
-			Queue<T> tmp = queue;
-			queue = help;
-			help = tmp;
+			pollQueueToHelp(queue,help);
+//			Queue<T> tmp = queue;
+//			queue = help;
+//			help = tmp;
 			return ans;
 		}
 
 		public boolean isEmpty() {
 			return queue.isEmpty();
+		}
+
+		private void pollQueueToHelp(Queue<T> queue, Queue<T> help) {
+			Queue<T> tmp = queue;
+			queue = help;
+			help = tmp;
 		}
 
 	}

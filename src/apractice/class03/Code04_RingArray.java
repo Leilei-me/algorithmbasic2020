@@ -4,14 +4,14 @@ package apractice.class03;
 //这里泛型使用
 //出现的数字不是在已知框架中约定俗成，就要考虑软编码 构造函数中传递
 //多加一个变量根本可以忽略，但能省很多代码
-public  class Code04_RingArray<T> {
+public  class Code04_RingArray {
     int size = 0;
     int inIndex =0;
     int outIndex =0;
 
     private int[] arr = new int[5];
 
-    public void add(T value){
+    public void add(int value){
         if(size < 5) {
             arr[inIndex] = (int)value;
             if(inIndex == 4) {
