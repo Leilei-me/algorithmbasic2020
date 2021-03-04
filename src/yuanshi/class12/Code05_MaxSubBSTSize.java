@@ -200,6 +200,7 @@ public class Code05_MaxSubBSTSize {
 			boolean leftMaxLessX = leftInfo == null ? true : (leftInfo.max < x.value);
 			boolean rightMinMoreX = rightInfo == null ? true : (x.value < rightInfo.min);
 			if (leftMaxLessX && rightMinMoreX) {
+				// 到此其实三层if...else了
 				int leftSize = leftInfo == null ? 0 : leftInfo.allSize;
 				int rightSize = rightInfo == null ? 0 : rightInfo.allSize;
 				p3 = leftSize + rightSize + 1;
